@@ -25,23 +25,24 @@ app.listen(3000, function() {
 console.log("Webserver draait");
 
 var data;
-request('https://geodata.antwerpen.be/arcgissql/rest/services/P_Portal/portal_publiek/MapServer/636/query?where=1%3D1&outFields=id,naam,straat,huisnummer,postcode&outSR=4326&f=json',
+request('https://geodata.antwerpen.be/arcgissql/rest/services/P_Portal/portal_publiek6/MapServer/670/query?where=1%3D1&outFields=NAAM,BEHEERDER,SHAPE,SHAPE_Length,SHAPE_Area,POSTCODE,DISTRICT,STRAATNAAM,TYPE,OBJECTID&outSR=4326&f=json',
   function(error, response, body){
     data = JSON.parse(body);
+    data = data.features;
 
-    for(var i=0; i < data.features.length; i++) {
+    for(var i=0; i < data.length; i++) {
         /*console.log("naam: " + data.features[i].attributes.naam);
         console.log("coord: " + data.features[i].geometry.x + ", " + data.features[i].geometry.y);
         console.log("");*/
-        console.log(data.features[i].attributes);
+        console.log(data[i].attributes.NAAM);
     }
 
   }
 );
 
 app.get('/', function(req, res){
-  res.render('schools', {
-    scholen: data
+  res.render('parken', {
+    parken: data
   });
 });
 
