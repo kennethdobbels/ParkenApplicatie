@@ -19,10 +19,6 @@
   "dependencies": {
     "ejs": "^2.7.1",
     "express": "^4.17.1",
-<<<<<<< HEAD
     "request": "^2.88.0"
-=======
-    "requet": "0.0.1-security"
->>>>>>> aanpassingen die weg mogen
   }
 }
