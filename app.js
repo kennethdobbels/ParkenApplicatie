@@ -39,10 +39,23 @@ request('https://geodata.antwerpen.be/arcgissql/rest/services/P_Portal/portal_pu
 
   }
 );
+app.get('/',function(req,res){
+  res.render('home');
+});
 
-app.get('/', function(req, res){
+
+
+app.get('/parken', function(req, res){
   res.render('parken', {
     parken: data
+  });
+});
+
+app.get('/parken/:postid', function(req, res){
+  res.render('detail', {
+    parken: data[req.params.postid],
+    postId: req.params.postid,
+    lastPostId: data.length-1
   });
 });
 

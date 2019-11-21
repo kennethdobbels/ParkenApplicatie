@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
-        <title>Parken in Antwerpen</title>
-
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
-        integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-        crossorigin=""/>
-        <link rel="stylesheet" href="css/map.css">
-    </head>
-    <body>
+<% include header %>
         <h1>Parken in Antwerpen</h1>
 
         <div id="map"></div>
@@ -19,7 +6,7 @@
             <div class="<%- parken[i].attributes.POSTCODE %>">
                 <header>
                     <h1>Park:</h1>
-                    <h2><%-parken[i].attributes.NAAM %></h2>
+                    <a href='/parken/<%=i %>'><h2><%-parken[i].attributes.NAAM %></h2></a>
                 </header>
                 <section>
                     <p>coord: <%-parken[i].geometry.rings[0][0][0] %> <%-parken[i].geometry.rings[0][0][1] %></p>
@@ -36,11 +23,13 @@
         crossorigin=""></script>
         <script src="js/map.js"></script>
 
+
         <script>
             <% for(var i=0; i < parken.length; i++) { %>
-            L.marker([<%-parken[i].geometry.rings[0][0][1] %>, <%-parken[i].geometry.rings[0][0][0] %>]).addTo(map)
-                .bindPopup("<%- parken[i].attributes.NAAM%>")
+            L.marker([<%-parken[i].geometry.rings[0][0][1]%>, <%-parken[i].geometry.rings[0][0][0] %>]).addTo(map)
+                .bindPopup("<a href='/parken/<%=i %>'><h2><%-parken[i].attributes.NAAM %></h2></a>");
+
             <% } %>
+            L.geoJSON(geojsonFeature).addTo(map);
         </script>
-    </body>
-</html>
+<% include footer %>
