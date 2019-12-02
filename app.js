@@ -50,7 +50,11 @@ app.get('/parken', function(req, res){
     parken: data
   });
 });
-
+app.get('/lijst', function(req, res){
+  res.render('lijst',{
+    parken:data
+  });
+});
 app.get('/parken/:postid', function(req, res){
   res.render('detail', {
     parken: data[req.params.postid],

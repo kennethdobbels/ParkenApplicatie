@@ -1,0 +1,22 @@
+<% include header %>
+        <% include navigation %>
+        <h1>Parken in Antwerpen</h1>
+
+
+        <% for(var i=0; i < parken.length; i++) { %>
+          <div class="lijstdiv>
+            <div class="<%- parken[i].attributes.POSTCODE %>">
+                <header>
+                    <h2>Park:</h2>
+                    <a href='/parken/<%=i %>'><h3><%-parken[i].attributes.NAAM %></h3></a>
+                </header>
+                <section>
+                    <p>coord: <%-parken[i].geometry.rings[0][0][0] %> <%-parken[i].geometry.rings[0][0][1] %></p>
+                </section>
+                <footer>
+
+                </footer>
+              </div>
+</div>
+        <% } %>
+<% include footer %>

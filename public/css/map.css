@@ -1,8 +1,106 @@
 body {
     padding: 0;
     margin: 0;
+    background: #EFE4DA;
 }
 html, body, #map {
     height: 90%;
     width: 100vw;
+}
+#Layer_1{
+  max-width: 70%;
+  display: block;
+  margin: 0 auto;
+  fill:#929E81;
+}
+.button{
+  padding: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  display: block;
+  margin: 0 auto;
+  font-size: 1em;
+  border-radius: 14%;
+  background: #929E81;
+}
+.button a{
+  text-decoration: none;
+  color:white;
+}
+.welkom {
+  text-align: center;
+  margin-top: -20px;
+  font-family: helvetica;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  width:80%;
+  display: block;
+
+  margin-left:  auto;
+  margin-right: auto;
+}
+
+h1{
+  font-family: helvetica;
+  color: #929E81;
+  margin-left: 20px;
+}
+
+h2{
+  font-family: helvetica;
+  color: #929E81;
+  margin-left: 20px;
+}
+
+h3{
+  font-family: helvetica;
+  color: #929E81;
+  margin-left: 20px;
+  text-decoration: underline;
+  font-size: 14px;
+  margin-top: -20px;
+}
+
+p{
+  margin-left: 20px;
+  font-family: helvetica;
+  font-size: 13px;
+  margin-bottom: 40px;
+}
+header h2:hover{
+  font-size: 2em;
+}
+.lijstdiv:hover{
+box-shadow: 10px 10px 10px;
+
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  background: #4D5E35;
+  height: 40px;
+}
+nav a{
+  font-family: helvetica;
+  font-size: 14px;
+  color: #929E81;
+  line-height: 2.5em;
+  text-decoration: none;
+
+
+}
+#details {
+  margin: 0 auto;
+  border:7px solid #4D5E35;
+  background: blue;
+}
+#map{
+  border:7px solid #4D5E35;
+  border-radius: 10px;
+  max-width: 80%;
+  margin: 0 auto;
+}
+nav a:hover{
+  font-size: 1em;
 }
