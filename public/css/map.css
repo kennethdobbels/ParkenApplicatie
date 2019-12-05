@@ -67,9 +67,7 @@ p{
   font-size: 13px;
   margin-bottom: 40px;
 }
-header h2:hover{
-  font-size: 2em;
-}
+
 .lijstdiv:hover{
 box-shadow: 10px 10px 10px;
 
@@ -92,9 +90,15 @@ nav a{
 }
 #details {
   margin: 0 auto;
-  border:7px solid #4D5E35;
-  background: blue;
+  background: #EFE4DA;
 }
+
+#details li{
+  font-family: helvetica;
+  line-height: 2em;
+  font-size: 1em;
+}
+
 #map{
   border:7px solid #4D5E35;
   border-radius: 10px;
@@ -103,4 +107,65 @@ nav a{
 }
 nav a:hover{
   font-size: 1em;
+}
+.form{
+  display: block;
+  margin: 0 auto;
+  max-width: 50%;
+  text-align: left;
+}
+input{
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  font-size: 1.2em;
+}
+label{
+  color:#4D5E35;
+}
+span{
+  color:#4D5E35;
+}
+
+form{
+  font-family: helvetica;
+  line-height: 2em;
+}
+input[type=submit]{
+  padding: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  display: block;
+  margin: 0 auto;
+  font-size: 1em;
+  border-radius: 14%;
+  background: #929E81;
+}
+.backMap{
+  padding: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  display: block;
+  margin: 0 auto;
+  font-size: 1em;
+  border-radius: 14%;
+  color:white;
+  background: #929E81;
+}
+.backMap a{
+  text-decoration: none;
+  color:white;
+}
+input[type=submit]{
+  text-decoration: none;
+  color:white;
+}
+.leaflet-popup-content-wrapper {
+  background-color: #EFE4DA;
+}
+.terugKnoppen{
+  display: flex;
+  max-width: 50%;
+  justify-content:space-between;
+  margin: 0 auto;
+
 }

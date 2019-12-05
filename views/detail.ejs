@@ -1,11 +1,19 @@
 <% include header %>
+<% include navigation %>
+
+<h1> Details over de parken </h1>
 <div id="details">
-<p>Naam:</p><p><%-parken.attributes.NAAM %></p>
-<p>Beheerder:</p><p><%-parken.attributes.BEHEERDER %></p>
-<p>Vorm:</p><p><%-parken.attributes.SHAPE %></p>
-<p>Postcode:</p><p><%-parken.attributes.POSTCODE %></p>
-<p>District:</p><p><%-parken.attributes.DISTRICT %></p>
-<p>Straatnaam:</p><p><%-parken.attributes.STRAATNAAM %></p>
-<p>Type:</p><p><%-parken.attributes.TYPE %></p>
+  <ul>
+<li><span>Naam:</span> <%-parken.attributes.NAAM %></li>
+<li><span>Beheerder: </span> <%-parken.attributes.BEHEERDER %></li>
+<li><span>Postcode: </span><%-parken.attributes.POSTCODE %></li>
+<li><span>District:</span> <%-parken.attributes.DISTRICT %></li>
+<li><span>Straatnaam:</span> <%-parken.attributes.STRAATNAAM %></li>
+<li><span> Type: </span><%-parken.attributes.TYPE %></li>
+</ul>
+<div class="terugKnoppen">
+<button class="backMap"><a  href='/parken'>Map</a></button>
+<button class="backMap"><a href='/lijst'>Lijst</a></button>
+</div>
 </div>
 <% include footer %>
