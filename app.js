@@ -10,7 +10,10 @@
 var express = require('express');
 var request = require('request');
 var path = require('path');
-
+let port = process.env.PORT;
+if(port == null || port ==""){
+  port = 3000;
+}
 var app = express();
 
 app.set("views", path.resolve(__dirname, "views"));
@@ -18,7 +21,7 @@ app.set("view engine", "ejs");
 
 app.use(express.static('public'));
 
-app.listen(3000, function() {
+app.listen(port, function() {
   console.log('Node luistert op poort 3000');
 });
 
