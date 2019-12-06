@@ -68,10 +68,7 @@ p{
   margin-bottom: 40px;
 }
 
-.lijstdiv:hover{
-box-shadow: 2px 2px 2px 20px;
 
-}
 nav{
   display: flex;
   justify-content: space-around;
