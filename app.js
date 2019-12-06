@@ -39,6 +39,8 @@ request('https://geodata.antwerpen.be/arcgissql/rest/services/P_Portal/portal_pu
 
   }
 );
+
+
 app.get('/',function(req,res){
   res.render('home');
 });
