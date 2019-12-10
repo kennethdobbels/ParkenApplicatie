@@ -1,9 +1,8 @@
 <% include header %>
 <% include navigation %>
-
 <h1> Details over de parken </h1>
 <div id="details">
-  <ul>
+  <ul class="details">
 <li><span>Naam:</span> <%-parken.attributes.NAAM %></li>
 <li><span>Beheerder: </span> <%-parken.attributes.BEHEERDER %></li>
 <li><span>Postcode: </span><%-parken.attributes.POSTCODE %></li>
@@ -14,6 +13,10 @@
 <div class="terugKnoppen">
 <button class="backMap"><a  href='/parken'>Map</a></button>
 <button class="backMap"><a href='/lijst'>Lijst</a></button>
+<input value="<%-parken.geometry.rings[0][0][1]%>" type="text" name="lat" id="lat"/>
+    <br/>
+<input value="<%-parken.geometry.rings[0][0][0]%>"  type="text" name="lng" id="lng"/>
+    <input type="button" onclick="zoomTo()" value="zoomTo"/>
 </div>
 </div>
 <% include footer %>

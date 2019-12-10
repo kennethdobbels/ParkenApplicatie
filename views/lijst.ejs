@@ -7,11 +7,11 @@
           <div class="lijstdiv">
             <div class="<%- parken[i].attributes.POSTCODE %>">
                 <header>
-                    <a href='/parken/<%=i %>'><h2><%-parken[i].attributes.NAAM %></h2></a>
+                    <a class="link" href='/parken/<%=i %>'><h2><%-parken[i].attributes.NAAM %></h2></a>
                 </header>
                 <section>
-                    <p>Straat: <%-parken[i].attributes.STRAATNAAM %></p>
-                    <p>Type: <%-parken[i].attributes.TYPE %></p>
+                    <p class="lijstDetails">Straat: <%-parken[i].attributes.STRAATNAAM %></p>
+                    <p class="lijstDetails">Type: <%-parken[i].attributes.TYPE %></p>
                 </section>
                 <footer>
 
