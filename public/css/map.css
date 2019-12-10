@@ -123,7 +123,9 @@ label{
 span{
   color:#4D5E35;
 }
-
+label{
+  font-size: 1.2em;
+}
 form{
   font-family: helvetica;
   line-height: 2em;
@@ -134,9 +136,12 @@ input[type=submit]{
   padding-bottom: 0.5em;
   display: block;
   margin: 0 auto;
-  font-size: 1em;
+  font-size: 1.2em;
   border-radius: 14%;
   background: #929E81;
+}
+textarea{
+  font-size: 1.2em;
 }
 .backMap{
   padding: 2em;

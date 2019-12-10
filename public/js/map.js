@@ -20,10 +20,4 @@ map.on('locationfound', onLocationFound);
 function onLocationError(e) {
     alert(e.message);
 }
-function zoomTo() {
-      var lat = document.getElementById("lat").value;
-      var lng = document.getElementById("lng").value;
-      window.location= "https://stark-fjord-57520.herokuapp.com/parken";
-      map.panTo(new L.LatLng(lat, lng));
-  }
 map.on('locationerror', onLocationError);
